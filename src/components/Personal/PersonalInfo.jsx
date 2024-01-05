@@ -84,11 +84,11 @@ const PersonalInfo = ({ item }) => {
                 <div className="w-full flex md:flex-row sm:flex-col md:gap-0 items-center justify-between ">
                     <div className="w-full flex flex-col md:mb-0 sm:mb-5 justify-between sm:mr-0 md:mr-5">
                         <label className="w-full text-lg font-semibold">Email</label>
-                        <input onChange={(e) => changeHandler(e, setEmail)} value={email} type="text" className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9" />
+                        <input onChange={(e) => changeHandler(e, setEmail)} value={email} type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9" />
                     </div>
                     <div className="w-full flex flex-col   justify-between sm:mr-0 md:mr-5">
                         <label className="w-full text-lg font-semibold">Phone</label>
-                        <input onChange={(e) => changeHandler(e, setPhone)} value={phone} type="text" className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9" />
+                        <input onChange={(e) => changeHandler(e, setPhone)} value={phone} type="tel" pattern="/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/" className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9" />
                     </div>
                 </div>
                 <div className="w-full flex md:flex-row sm:flex-col md:gap-0 items-center justify-between ">
@@ -98,7 +98,7 @@ const PersonalInfo = ({ item }) => {
                     </div>
                     <div className="w-full flex flex-col justify-between sm:mr-0 md:mr-5">
                         <label className="w-full text-lg font-semibold">Linkdin</label>
-                        <input onChange={(e) => changeHandler(e, setSocials)} value={socials} type="text" className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9" />
+                        <input onChange={(e) => changeHandler(e, setSocials)} value={socials} type="url" className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9" />
                     </div>
                 </div>
                 <div className="w-full flex md:flex-row sm:flex-col md:gap-0 items-center justify-between ">

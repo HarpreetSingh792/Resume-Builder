@@ -49,7 +49,7 @@ const SkillsFormTemp = ({ item, index, delForm, setAddSkillsForm, addSkillsForm 
                     <label className='text-gray-600 sm:text-xs md:text-base'>Excellent</label>
                 </div>
                 <div className='flex flex-col justify-center items-center'>
-                    <input className='sm:w-5 sm:h-5 md:h-7 md:w-7cursor-pointer accent-blue-700 outline-none border rounded-xl' type="checkbox" name='level' value="75" onChange={(e) => { changeHandler(e, setLevel, index) }} onClick={checkHandler} checked={checked === "75"} />
+                    <input className='sm:w-5 sm:h-5 md:h-7 md:w-7 cursor-pointer accent-blue-700 outline-none border rounded-xl' type="checkbox" name='level' value="75" onChange={(e) => { changeHandler(e, setLevel, index) }} onClick={checkHandler} checked={checked === "75"} />
                     <label className='text-gray-600 sm:text-xs md:text-base'>Advanced</label>
                 </div>
                 <div className='flex flex-col justify-center items-center'>
