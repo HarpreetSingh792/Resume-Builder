@@ -98,7 +98,7 @@ const PersonalInfo = ({ item }) => {
                     </div>
                     <div className="w-full flex flex-col justify-between sm:mr-0 md:mr-5">
                         <label className="w-full text-lg font-semibold">Linkdin</label>
-                        <input onChange={(e) => changeHandler(e, setSocials)} value={socials} type="url" className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9" />
+                        <input onChange={(e) => changeHandler(e, setSocials)} value={socials} type="text" pattern='[a-z]*\.[a-z]{3}/[a-z]{2}/[a-z A-Z 0-9\-]*' className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9" />
                     </div>
                 </div>
                 <div className="w-full flex md:flex-row sm:flex-col md:gap-0 items-center justify-between ">

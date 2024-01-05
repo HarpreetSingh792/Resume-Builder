@@ -194,9 +194,9 @@ const Template1 = () => {
                                                         <div className="w-full">
                                                             <ul className="mt-4 ml-5 w-full">
                                                                 {
-                                                                    item.des.map((item, index) => <p className='font-bold text-lg text-gray-900 text-start list-disc' key={index}>{
+                                                                    item.des.map((item, index) => <li className='font-bold text-lg text-gray-900 text-start list-disc' key={index}>{
                                                                         item
-                                                                    }</p>)
+                                                                    }</li>)
                                                                 }
                                                             </ul>
                                                         </div>
