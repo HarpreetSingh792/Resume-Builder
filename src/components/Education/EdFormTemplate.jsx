@@ -33,7 +33,7 @@ const EdFormTemplate = ({item,index,delForm,setAddEduForm,addEduForm}) => {
             <div className="w-full flex md:flex-row sm:flex-col md:gap-0 items-center justify-between sm:mb-0 md:mb-5">
                 <div className="w-full flex flex-col md:mb-0 sm:mb-5 justify-between sm:mr-0 md:mr-5">
                     <label className=" text-lg font-semibold w-full">Type</label>
-                    <input type="text" name='type' value={eduType} onChange={(e)=>{changeHandler(e,setEduType,index)}} className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9" />
+                    <input type="text" name='type' value={eduType} onChange={(e)=>{changeHandler(e,setEduType,index)}} className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9 placeholder:text-gray-500/60" placeholder='Eg: Graduation' />
                 </div>
                 <div className="w-full flex flex-col  justify-center mr-5">
                 </div>
@@ -41,21 +41,21 @@ const EdFormTemplate = ({item,index,delForm,setAddEduForm,addEduForm}) => {
             <div className="w-full flex md:flex-row sm:flex-col md:gap-0 items-center justify-between sm:mb-0 md:mb-5">
                 <div className="w-full flex flex-col md:mb-0 sm:mb-5 justify-between sm:mr-0 md:mr-5">
                     <label className=" text-lg font-semibold w-full">University</label>
-                    <input type="text" name='university' value={uniName} onChange={(e)=>{changeHandler(e,setUniName,index)}} className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9" />
+                    <input type="text" name='university' value={uniName} onChange={(e)=>{changeHandler(e,setUniName,index)}} className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9 placeholder:text-gray-500/60" placeholder='Eg: XYZ University' />
                 </div>
                 <div className="w-full flex flex-col justify-between sm:mr-0 md:mr-5 md:mb-0 sm:mb-5">
                     <label className=" text-lg font-semibold w-full">Degree</label>
-                    <input type="text" name='degreeType' value={degreeType} onChange={(e)=>{changeHandler(e,setDegreeType,index)}} className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9" />
+                    <input type="text" name='degreeType' value={degreeType} onChange={(e)=>{changeHandler(e,setDegreeType,index)}} className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9 placeholder:text-gray-500/60" placeholder='Eg: B.Tech' />
                 </div>
             </div>
             <div className="w-full flex md:flex-row sm:flex-col md:gap-0 items-center justify-between sm:mb-0 md:mb-5">
                 <div className="w-full flex flex-col md:mb-0 sm:mb-5 justify-between sm:mr-0 md:mr-5">
                     <label className=" text-lg font-semibold w-full">Start Year</label>
-                    <input type="text" name='startYear' value={startYear} onChange={(e)=>{changeHandler(e,setStartYear,index)}} className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9" />
+                    <input type="text" name='startYear' value={startYear} onChange={(e)=>{changeHandler(e,setStartYear,index)}} className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9 placeholder:text-gray-500/60" placeholder='Eg: 2022' />
                 </div>
                 <div className="w-full flex flex-col justify-between sm:mr-0 md:mr-5 md:mb-0 sm:mb-5">
                     <label className=" text-lg font-semibold w-full">End Year</label>
-                    <input type="text" name='endYear' value={endYear} onChange={(e)=>{changeHandler(e,setEndYear,index)}} className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9" />
+                    <input type="text" name='endYear' value={endYear} onChange={(e)=>{changeHandler(e,setEndYear,index)}} className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9 placeholder:text-gray-500/60" placeholder='Eg: 2025' />
                 </div>
             </div>
             <div className='flex sm:justify-between md:justify-start items-center'>

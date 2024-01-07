@@ -42,21 +42,21 @@ const ProjectsSummaryTemplate = ({ item, index, delForm, setProjectsForm, projec
             <div className="w-full flex md:flex-row sm:flex-col md:gap-0 items-center justify-between sm:mb-0 md:mb-5">
                 <div className="w-full flex flex-col md:mb-0 sm:mb-5 justify-between sm:mr-0 md:mr-5">
                     <label className=" text-lg font-semibold w-full">Title</label>
-                    <input type="text" name='title' value={title} onChange={(e) => { changeHandler(e, setTitle, index) }} className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9" />
+                    <input type="text" name='title' value={title} onChange={(e) => { changeHandler(e, setTitle, index) }} className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9 placeholder:text-gray-500/60" placeholder='Eg: E-Commerce Store' />
                 </div>
                 <div className="w-full flex flex-col justify-between sm:mr-0 md:mr-5 md:mb-0 sm:mb-5">
                     <label className=" text-lg font-semibold w-full">Role</label>
-                    <input type="text" name='role' value={role} onChange={(e) => { changeHandler(e, setRole, index) }} className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9" />
+                    <input type="text" name='role' value={role} onChange={(e) => { changeHandler(e, setRole, index) }} className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9 placeholder:text-gray-500/60" placeholder='Eg: Creater' />
                 </div>
             </div>
             <div className="w-full flex md:flex-row sm:flex-col md:gap-0 items-center justify-between sm:mb-0 md:mb-5">
                 <div className="w-full flex flex-col md:mb-0 sm:mb-5 justify-between sm:mr-0 md:mr-5">
                     <label className=" text-lg font-semibold w-full">Start Year</label>
-                    <input type="text" name='startYear' value={startYear} onChange={(e) => { changeHandler(e, setStartYear, index) }} className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9" />
+                    <input type="text" name='startYear' value={startYear} onChange={(e) => { changeHandler(e, setStartYear, index) }} className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9 placeholder:text-gray-500/60" placeholder='Eg: 2024' />
                 </div>
                 <div className="w-full flex flex-col justify-between sm:mr-0 md:mr-5 md:mb-0 sm:mb-5">
                     <label className=" text-lg font-semibold w-full">End Year</label>
-                    <input type="text" name='endYear' value={endYear} onChange={(e) => { changeHandler(e, setEndYear, index) }} className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9" />
+                    <input type="text" name='endYear' value={endYear} onChange={(e) => { changeHandler(e, setEndYear, index) }} className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9 placeholder:text-gray-500/60" placeholder='Eg: 2024' />
                 </div>
             </div>
             <div className='mt-16'>
@@ -65,19 +65,19 @@ const ProjectsSummaryTemplate = ({ item, index, delForm, setProjectsForm, projec
                 <div className="w-full flex  items-center justify-between mb-5">
                     <div className="w-full flex flex-col  justify-between">
                         <label className="text-gray-500 text-lg font-semibold w-full">Key Point 1</label>
-                        <textarea maxLength={500} type="text" className="w-full p-2 sm:h-40 md:h-20 rounded-md border-2 border-blue-400 outline-none" name='des' value={point1} onChange={(e) => { changeHandler(e, setPoint1, index, 0) }} />
+                        <textarea maxLength={500} type="text" className="w-full p-2 sm:h-40 md:h-20 rounded-md border-2 border-blue-400 outline-none placeholder:text-gray-500/60" placeholder='Eg: Enter Key Points here...' name='des' value={point1} onChange={(e) => { changeHandler(e, setPoint1, index, 0) }} />
                     </div>
                 </div>
                 <div className="w-full flex  items-center justify-between mb-5">
                     <div className="w-full flex flex-col  justify-between">
                         <label className="text-gray-500 text-lg font-semibold w-full">Key Point 2</label>
-                        <textarea maxLength={500} type="text" className="w-full p-2 sm:h-40 md:h-20 rounded-md border-2 border-blue-400 outline-none" name='des' value={point2} onChange={(e) => { changeHandler(e, setPoint2, index, 1) }} />
+                        <textarea maxLength={500} type="text" className="w-full p-2 sm:h-40 md:h-20 rounded-md border-2 border-blue-400 outline-none placeholder:text-gray-500/60" placeholder='Eg: Enter Key Points here...' name='des' value={point2} onChange={(e) => { changeHandler(e, setPoint2, index, 1) }} />
                     </div>
                 </div>
                 <div className="w-full flex  items-center justify-between mb-5">
                     <div className="w-full flex flex-col  justify-between">
                         <label className="text-gray-500 text-lg font-semibold w-full">Key Point 3</label>
-                        <textarea maxLength={500} type="text" className="w-full p-2 sm:h-40 md:h-20 rounded-md border-2 border-blue-400 outline-none" name='des' value={point3} onChange={(e) => { changeHandler(e, setPoint3, index, 2) }} />
+                        <textarea maxLength={500} type="text" className="w-full p-2 sm:h-40 md:h-20 rounded-md border-2 border-blue-400 outline-none placeholder:text-gray-500/60" placeholder='Eg: Enter Key Points here...' name='des' value={point3} onChange={(e) => { changeHandler(e, setPoint3, index, 2) }} />
                     </div>
                 </div>
             </div>

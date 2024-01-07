@@ -32,7 +32,7 @@ const SkillsFormTemp = ({ item, index, delForm, setAddSkillsForm, addSkillsForm 
             <div className="w-full flex md:flex-row sm:flex-col md:gap-0 items-center justify-between sm:mb-0 md:mb-5 ">
                 <div className="w-full flex flex-col md:mb-0 sm:mb-5 justify-between sm:mr-0 md:mr-5">
                     <label className=" text-lg font-semibold w-full"></label>
-                    <input type="text" name='skillName' value={skillName} onChange={(e) => { changeHandler(e, setSkillName, index) }} className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9" />
+                    <input type="text" name='skillName' value={skillName} onChange={(e) => { changeHandler(e, setSkillName, index) }} className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9 placeholder:text-gray-500/60" placeholder='Eg: React' />
                 </div>
                 <div className="w-full flex flex-col  justify-center mr-5"></div>
             </div>
@@ -41,7 +41,7 @@ const SkillsFormTemp = ({ item, index, delForm, setAddSkillsForm, addSkillsForm 
             <div className='w-full my-7 flex items-center justify-evenly sm:gap-1 md:gap-0 p-4'>
                 <h2 className='text-gray-600 font-semibold md:ml-0 sm:-ml-2'>Level</h2>
                 <div className='flex flex-col justify-center items-center'>
-                    <input className='sm:w-5 sm:h-5 md:h-7 md:w-7 cursor-pointer accent-blue-700 outline-none border rounded-xl' type="checkbox" name='level' value="25" onChange={(e) => { changeHandler(e, setLevel, index) }} onClick={checkHandler} checked={checked === "25"} />
+                    <input className='sm:w-5 sm:h-5 md:h-7 md:w-7 cursor-pointer accent-blue-700 outline-none border rounded-xl' type="checkbox" name='level' value="25" onChange={(e) => { changeHandler(e, setLevel, index) }} onClick={checkHandler} checked={checked === "25"}/>
                     <label className='text-gray-600 sm:text-xs md:text-base'>Average</label>
                 </div>
                 <div className='flex flex-col justify-center items-center'>

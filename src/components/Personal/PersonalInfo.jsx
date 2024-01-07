@@ -8,7 +8,7 @@ const PersonalInfo = ({ item }) => {
     const { addDetails } = useProfile();
     const location = useLocation();
     const navigate = useNavigate();
-    const [isSave, setIsSave] = useState((item || location.state) ? true : false);
+    const [isSave, setIsSave] = useState((location?.state?.length>0 || item.length>0) ? true : false);
     const [firstName, setFirstName] = useState(item?.name?.split(" ")[0] || location?.state?.name?.split(" ")[0] || "");
     const [lastName, setLastName] = useState(item?.name?.split(" ")[1] || location?.state?.name?.split(" ")[1] || "");
     const [role, setRole] = useState(item?.role || location?.state?.role || "");
@@ -74,58 +74,61 @@ const PersonalInfo = ({ item }) => {
                 <div className="w-full flex md:flex-row sm:flex-col md:gap-0 items-center justify-between">
                     <div className="w-full flex flex-col md:mb-0 sm:mb-5 justify-between sm:mr-0 md:mr-5">
                         <label className="w-full text-lg font-semibold">First Name</label>
-                        <input onChange={(e) => changeHandler(e, setFirstName)} value={firstName} type="text" className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9" />
+                        <input onChange={(e) => changeHandler(e, setFirstName)} value={firstName} type="text" className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9 placeholder:text-gray-500/60" placeholder='Eg: Rigel' />
                     </div>
                     <div className="w-full flex flex-col justify-between sm:mr-0 md:mr-5">
                         <label className="w-full text-lg font-semibold">Last Name</label>
-                        <input onChange={(e) => changeHandler(e, setLastName)} value={lastName} type="text" className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9" />
+                        <input onChange={(e) => changeHandler(e, setLastName)} value={lastName} type="text" className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9 placeholder:text-gray-500/60" placeholder='Eg: M87' />
                     </div>
                 </div>
                 <div className="w-full flex md:flex-row sm:flex-col md:gap-0 items-center justify-between ">
-                    <div className="w-full flex flex-col md:mb-0 sm:mb-5 justify-between sm:mr-0 md:mr-5">
+                    <div className="w-full flex flex-col md:mb-0 sm:mb-5 justify-between sm:mr-0 md:mr-5 relative">
                         <label className="w-full text-lg font-semibold">Email</label>
-                        <input onChange={(e) => changeHandler(e, setEmail)} value={email} type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9" />
+                        <input onChange={(e) => changeHandler(e, setEmail)} value={email} type="email"  className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9 placeholder:text-gray-500/60  invalid:border-red-700 invalid:text-red-700 [&:invalid+p]:block" placeholder='Eg: rigel87@gmail.com' />
+                        <p className='text-red-700 absolute right-0 hidden'>Enter data in correct format</p>
                     </div>
-                    <div className="w-full flex flex-col   justify-between sm:mr-0 md:mr-5">
+                    <div className="w-full flex flex-col   justify-between sm:mr-0 md:mr-5 relative">
                         <label className="w-full text-lg font-semibold">Phone</label>
-                        <input onChange={(e) => changeHandler(e, setPhone)} value={phone} type="tel" pattern="/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/" className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9" />
+                        <input onChange={(e) => changeHandler(e, setPhone)} value={phone} type="tel" pattern="[0-9][0-9]{9}" className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9 placeholder:text-gray-500/60  invalid:border-red-700 invalid:text-red-700 [&:invalid+p]:block" placeholder='Eg: 1544070902' />
+                        <p className='text-red-700 absolute right-0 hidden'>Enter data in correct format</p>
                     </div>
                 </div>
                 <div className="w-full flex md:flex-row sm:flex-col md:gap-0 items-center justify-between ">
                     <div className="w-full flex flex-col md:mb-0 sm:mb-5 justify-between sm:mr-0 md:mr-5">
                         <label className="w-full text-lg font-semibold">Address 1</label>
-                        <input onChange={(e) => changeHandler(e, setAddress1)} value={address1} type="text" className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9" />
+                        <input onChange={(e) => changeHandler(e, setAddress1)} value={address1} type="text" className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9 placeholder:text-gray-500/60" placeholder='Eg: H:no-98 x-stallic-83 gallactic road' />
                     </div>
-                    <div className="w-full flex flex-col justify-between sm:mr-0 md:mr-5">
+                    <div className="w-full flex flex-col justify-between sm:mr-0 md:mr-5 relative">
                         <label className="w-full text-lg font-semibold">Linkdin</label>
-                        <input onChange={(e) => changeHandler(e, setSocials)} value={socials} type="text" pattern='[a-z]*\.[a-z]{3}/[a-z]{2}/[a-z A-Z 0-9\-]*' className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9" />
+                        <input onChange={(e) => changeHandler(e, setSocials)} value={socials} type="text" pattern='[a-z]*\.[a-z]{3}/[a-z]{2}/[a-z A-Z 0-9\-]*' className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9 placeholder:text-gray-500/60 invalid:border-red-700 invalid:text-red-700 [&:invalid+p]:block" placeholder='Eg: linkdin.com/in/rigel0715' />
+                        <p className='text-red-700 absolute right-0 hidden'>Enter data in correct format</p>
                     </div>
                 </div>
                 <div className="w-full flex md:flex-row sm:flex-col md:gap-0 items-center justify-between ">
                     <div className="w-full flex flex-col md:mb-0 sm:mb-5 justify-between sm:mr-0 md:mr-5">
                         <label className="w-full text-lg font-semibold">City</label>
-                        <input onChange={(e) => changeHandler(e, setCity)} value={city} type="text" className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9" />
+                        <input onChange={(e) => changeHandler(e, setCity)} value={city} type="text" className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9 placeholder:text-gray-500/60" placeholder='Eg: Amritsar' />
                     </div>
                     <div className="w-full flex flex-col justify-between sm:mr-0 md:mr-5">
                         <label className="w-full text-lg font-semibold">State</label>
-                        <input onChange={(e) => changeHandler(e, setState)} value={state} type="text" className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9" />
+                        <input onChange={(e) => changeHandler(e, setState)} value={state} type="text" className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9 placeholder:text-gray-500/60" placeholder='Eg: Punjab' />
                     </div>
                 </div>
                 <div className="w-full flex md:flex-row sm:flex-col md:gap-0 items-center justify-between ">
                     <div className="w-full flex flex-col md:mb-0 sm:mb-5 justify-between sm:mr-0 md:mr-5">
                         <label className="w-full text-lg font-semibold">Pincode</label>
-                        <input onChange={(e) => changeHandler(e, setPincode)} value={pincode} type="text" className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9" />
+                        <input onChange={(e) => changeHandler(e, setPincode)} value={pincode} type="text" className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9 placeholder:text-gray-500/60" placeholder='Eg: 143001' />
                     </div>
 
                     <div className="w-full flex flex-col justify-between sm:mr-0 md:mr-5">
                         <label className="w-full text-lg font-semibold">Role</label>
-                        <input onChange={(e) => changeHandler(e, setRole)} value={role} type="text" className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9" />
+                        <input onChange={(e) => changeHandler(e, setRole)} value={role} type="text" className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9 placeholder:text-gray-500/60" placeholder='Eg: Software Developer' />
                     </div>
                 </div>
                 <div className="w-full flex md:flex-row sm:flex-col md:gap-0 items-center justify-between ">
                     <div className="w-full flex flex-col justify-between sm:mr-0 md:mr-5">
                         <label className="w-full text-xl font-semibold mr-2">Objective</label>
-                        <textarea onChange={(e) => changeHandler(e, setObjective)} value={objective} rows="4" className="w-full p-2 sm:h-36 md:h-20 rounded-md border-2 border-blue-400 outline-none"></textarea>
+                        <textarea onChange={(e) => changeHandler(e, setObjective)} value={objective} rows="4" className="w-full p-2 sm:h-36 md:h-20 rounded-md border-2 border-blue-400 outline-none placeholder:text-gray-500/60" placeholder='Eg: Enter the objective here...'></textarea>
                     </div>
                 </div>
                 <hr className=" text-blue-700 w-11/12 h-8"></hr>

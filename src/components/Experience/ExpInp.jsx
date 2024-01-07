@@ -37,27 +37,27 @@ const ExpInp = ({ item, index, delForm, setAddExpForm, addExpForm }) => {
             <div className="w-full flex md:flex-row sm:flex-col md:gap-0 items-center justify-between sm:mb-0 md:mb-5">
                 <div className="w-full flex flex-col md:mb-0 sm:mb-5 justify-between sm:mr-0 md:mr-5">
                     <label className=" text-lg font-semibold w-full">Job Title</label>
-                    <input type="text" value={jobTitle} name='job' onChange={(e) => { changeHandler(e, setJobTitle, index) }} className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9" />
+                    <input type="text" value={jobTitle} name='job' onChange={(e) => { changeHandler(e, setJobTitle, index) }} className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9 placeholder:text-gray-500/60" placeholder='Eg: Senior Developer' />
                 </div>
                 <div className="w-full flex flex-col justify-between sm:mr-0 md:mr-5">
                     <label className=" text-lg font-semibold w-full">Organization Name</label>
-                    <input type="text" value={orgName} name='organization' onChange={(e) => { changeHandler(e, setOrgName, index) }} className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9 md:mb-0 sm:mb-5 " />
+                    <input type="text" value={orgName} name='organization' onChange={(e) => { changeHandler(e, setOrgName, index) }} className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9 md:mb-0 sm:mb-5 placeholder:text-gray-500/60"  placeholder='Eg: Microsoft' />
                 </div>
             </div>
             <div className="w-full flex md:flex-row sm:flex-col md:gap-0 items-center justify-between sm:mb-0 md:mb-5">
                 <div className="w-full flex flex-col md:mb-0 sm:mb-5 justify-between sm:mr-0 md:mr-5">
                     <label className=" text-lg font-semibold w-full">Start Year</label>
-                    <input type="text" value={startYear} name='startYear' onChange={(e) => { changeHandler(e, setStartYear, index) }} className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9" />
+                    <input type="text" value={startYear} name='startYear' onChange={(e) => { changeHandler(e, setStartYear, index) }} className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9 placeholder:text-gray-500/60" placeholder='Eg: 2024' />
                 </div>
                 <div className="w-full flex flex-col justify-between sm:mr-0 md:mr-5 md:mb-0 sm:mb-5">
                     <label className=" text-lg font-semibold w-full">End Year</label>
-                    <input type="text" value={endYear} name='endYear' onChange={(e) => { changeHandler(e, setEndYear, index) }} className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9" />
+                    <input type="text" value={endYear} name='endYear' onChange={(e) => { changeHandler(e, setEndYear, index) }} className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9 placeholder:text-gray-500/60" placeholder='Eg: 2030' />
                 </div>
             </div>
             <div className="w-full flex  items-center justify-between mb-5">
                 <div className="w-full flex flex-col  justify-between">
                     <label className="text-xl font-semibold mr-2 mb-0.5">Job Description</label>
-                    <textarea name='desc' className="sm:w-full md:w-1/2 p-2 sm:h-36 md:h-20 rounded-md border-2 border-blue-400 outline-none" value={jobDesc} onChange={(e) => { changeHandler(e, setJobDesc, index) }}></textarea>
+                    <textarea name='desc' className="sm:w-full md:w-1/2 p-2 sm:h-36 md:h-20 rounded-md border-2 border-blue-400 outline-none placeholder:text-gray-500/60" placeholder='Eg: Enter job description here...' value={jobDesc} onChange={(e) => { changeHandler(e, setJobDesc, index) }}></textarea>
                 </div>
             </div>
             <div className='mt-4 flex sm:justify-between md:justify-start items-center'>

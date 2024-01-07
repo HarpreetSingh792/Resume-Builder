@@ -26,7 +26,7 @@ const LangTemplate = ({ item, index, delForm, setLangData, langData }) => {
             <div className="w-full flex md:flex-row sm:flex-col md:gap-0 items-center justify-between sm:mb-0 md:mb-5">
                 <div className="w-full flex flex-col  justify-center">
                     <label className=" text-lg font-semibold w-full"></label>
-                    <input type="text" name='langName' value={langName} onChange={(e) => { changeHandler(e, setLangName, index) }} className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9" />
+                    <input type="text" name='langName' value={langName} onChange={(e) => { changeHandler(e, setLangName, index) }} className="rounded-md border-2 border-blue-400 w-full outline-none pl-3 h-9 placeholder:text-gray-500/60" placeholder='Eg: English' />
                 </div>
                 <div className="w-full flex flex-col  justify-center"></div>
             </div>
