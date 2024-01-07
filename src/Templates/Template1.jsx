@@ -86,8 +86,8 @@ const Template1 = () => {
 
                     {/* Name Banner and Role */}
                     <div className={`py-2 px-12 bg-dark-sea-green text-whiteSmoke1 font-arial h-20 w-full`}>
-                        {name.length > 0 ? <p className='text-4xl font-bold'>{name}</p> : ""}
-                        {role.length > 0 ? <p className='text-xl font-thin leading-3'>{role}</p> : ""}
+                        {name?.length > 0 ? <p className='text-4xl font-bold'>{name}</p> : ""}
+                        {role?.length > 0 ? <p className='text-xl font-thin leading-3'>{role}</p> : ""}
                     </div>
                     <div className='flex '>
                         {/* Education and Tech Skills  and Languages*/}
