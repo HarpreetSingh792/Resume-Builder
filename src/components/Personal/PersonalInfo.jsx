@@ -8,7 +8,7 @@ const PersonalInfo = ({ item }) => {
     const { addDetails } = useProfile();
     const location = useLocation();
     const navigate = useNavigate();
-    const [isSave, setIsSave] = useState((location?.state?.length>0 || item.length>0) ? true : false);
+    const [isSave, setIsSave] = useState(location?.state ? true : false);
     const [firstName, setFirstName] = useState(item?.name?.split(" ")[0] || location?.state?.name?.split(" ")[0] || "");
     const [lastName, setLastName] = useState(item?.name?.split(" ")[1] || location?.state?.name?.split(" ")[1] || "");
     const [role, setRole] = useState(item?.role || location?.state?.role || "");
