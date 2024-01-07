@@ -41,7 +41,6 @@ export const CVContext = createContext({
     }],
 
     addDetails:(details,id)=>{},
-    updateDetails:(id,updateItem)=>{},
     deleteDetails:(id)=>{},
 
 })

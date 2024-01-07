@@ -26,11 +26,18 @@ const Skills = ({ item }) => {
 
     const submitSkillsDetailsHandler = (e) => {
         e.preventDefault();
-        const data = {
+        let data;
+        location.state?.id?(  data = {
             ...location.state,
             "skills": addSkillsForm
-        }
+        }):( data = {
+            id:Date.now(),
+            ...location.state,
+            "skills": addSkillsForm
+        })
+       
         location.state?.id ? addDetails(data, location.state.id) : addDetails(data)
+      
         navigate("/templates", { state: location.state?.length > 0 ? location.state : data });
     }
     return (

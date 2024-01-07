@@ -33,9 +33,6 @@ function App() {
     }
   }
 
-  const updateDetails = (id, updateItem) => {
-    setDetails((prev) => prev.map((item) => item.id === id ? updateItem : item))
-  }
   const deleteDetails = (id) => {
     setDetails((prev) => prev.filter((item) => item.id !== id))
     const data = details.filter((item) => item.id !== id);
@@ -62,7 +59,7 @@ function App() {
 
 
   return (
-    <ContextProvider value={{ details, addDetails, updateDetails, deleteDetails }}>
+    <ContextProvider value={{ details, addDetails,deleteDetails }}>
 
       <header className="z-50 sticky top-0 bg-white/10 backdrop-blur-lg shadow-sm shadow-blue-300 w-full flex justify-between items-center ">
         <nav className="ml-3">
@@ -70,9 +67,9 @@ function App() {
             <img src="/assets/logo.png" alt="logo" className=" sm:h-9 sm:w-40 md:h-10 md:w-44" />
           </NavLink>
         </nav>
-        {path.length>0?<div className="mr-5 border rounded-lg cursor-pointer sm:block md:hidden" onClick={toggleHandler}>
+        {path.length > 0 ? <div className="mr-5 border rounded-lg cursor-pointer sm:block md:hidden" onClick={toggleHandler}>
           <GiHamburgerMenu />
-        </div>:""}
+        </div> : ""}
       </header>
       <main>
         {navToggler ?
